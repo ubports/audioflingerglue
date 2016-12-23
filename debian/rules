@@ -1,0 +1,6 @@
+#!/usr/bin/make -f
+%:
+	dh $@
+override_dh_install:
+	dh_install audioflingerglue.h /usr/share/audioflingerglue
+	dh_install hybris.c /usr/share/audioflingerglue

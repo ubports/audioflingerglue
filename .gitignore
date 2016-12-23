@@ -1,0 +1,5 @@
+*.deb
+*.substvars
+*debhelper*
+debian/files
+debian/audioflingerglue
