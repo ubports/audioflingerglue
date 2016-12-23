@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2015 Jolla Ltd.
+ * Copyright 2016 The Ubports project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,6 +15,7 @@
  * limitations under the License.
  *
  * Authored by: Juho Hämäläinen <juho.hamalainen@jolla.com>
+ *              Marius Gripsgard <mariogrip@ubports.com>
  */
 
 #include "audioflingerglue.h"
@@ -23,7 +25,7 @@
 #include <stdlib.h>
 #include <hybris/common/binding.h>
 
-HYBRIS_LIBRARY_INITIALIZE(audioflingerglue, "/usr/libexec/droid-hybris/system/lib/libaudioflingerglue.so");
+HYBRIS_LIBRARY_INITIALIZE(audioflingerglue, "/system/lib/libaudioflingerglue.so");
 
 HYBRIS_IMPLEMENT_FUNCTION2(audioflingerglue, DroidAfGlue*, droid_afglue_connect, DroidAfGlueCallbacks*, void*);
 HYBRIS_IMPLEMENT_VOID_FUNCTION1(audioflingerglue, droid_afglue_disconnect, DroidAfGlue*);
