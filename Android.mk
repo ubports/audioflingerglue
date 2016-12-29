@@ -47,7 +47,7 @@ LOCAL_SHARED_LIBRARIES := libc \
                           libserviceutility
 endif
 LOCAL_CPPFLAGS=-DANDROID_MAJOR=$(ANDROID_MAJOR) -DANDROID_MINOR=$(ANDROID_MINOR) -DANDROID_MICRO=$(ANDROID_MICRO)
-LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_TAGS := optional eng debug
 LOCAL_MODULE := libaudioflingerglue
 include $(BUILD_SHARED_LIBRARY)
 
@@ -59,7 +59,7 @@ LOCAL_SHARED_LIBRARIES := libutils \
                           libaudioutils \
                           libmedia \
                           libhardware
-LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_TAGS := optional eng debug
 LOCAL_CPPFLAGS := -DANDROID_MAJOR=$(ANDROID_MAJOR) -DANDROID_MINOR=$(ANDROID_MINOR) -DANDROID_MICRO=$(ANDROID_MICRO)
 ifneq ($(CM_BUILD),)
 LOCAL_CPPFLAGS += -DCM_BUILD
