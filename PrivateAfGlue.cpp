@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2015 Jolla Ltd.
+ * Copyright 2016 The Ubports project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,6 +15,7 @@
  * limitations under the License.
  *
  * Authored by: Juho Hämäläinen <juho.hamalainen@jolla.com>
+ *              Marius Gripsgard <mariogrip@ubports.com>
  */
 
 #define LOG_TAG "PrivateAfGlue"
@@ -43,6 +45,7 @@ PrivateAfGlue::~PrivateAfGlue()
 status_t PrivateAfGlue::setParameters(audio_io_handle_t ioHandle,
                                const String8 &keyValuePairs)
 {
+    ALOGD("set keyValuePairs: %s", (const char*) keyValuePairs);
     if (mHandler == NULL) {
         ALOGW("No handler for setParameters.");
         return NO_ERROR;
@@ -54,6 +57,7 @@ status_t PrivateAfGlue::setParameters(audio_io_handle_t ioHandle,
 String8 PrivateAfGlue::getParameters(audio_io_handle_t ioHandle,
                               const String8 &keys) const
 {
+    ALOGD("get keys: %s", (const char*) keys);
     if (mHandler == NULL) {
         ALOGW("No handler for getParameters.");
         return String8("");
