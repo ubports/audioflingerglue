@@ -1,4 +1,4 @@
-audioflingerglue (0.1ubports1) UNRELEASED; urgency=medium
+audioflingerglue (0.1ubports1) xenial; urgency=medium
 
   * No change rebuild to publish sources to ubports repo 
 
