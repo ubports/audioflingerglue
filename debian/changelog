@@ -1,4 +1,10 @@
-audioflingerglue (0.1ubports1) UNRELEASED; urgency=medium
+audioflingerglue (0.1ubports2) xenial; urgency=medium
+
+  * Mark audioflingerglue-dev as Multi-Arch: foreign
+
+ -- Ratchanan Srirattanamet <peathot@hotmail.com>  Wed, 18 Sep 2019 22:48:42 +0700
+
+audioflingerglue (0.1ubports1) xenial; urgency=medium
 
   * No change rebuild to publish sources to ubports repo 
 
