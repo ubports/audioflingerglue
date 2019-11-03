@@ -7,6 +7,6 @@ Maintainer: Marius Gripsgard <marius@ubports.com>
 
 Package: audioflingerglue-dev
 Priority: optional
-Architecture: all
+Architecture: any
 Multi-Arch: foreign
 Description: Audioflinger glue development files
