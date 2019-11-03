@@ -1,6 +1,16 @@
 #!/usr/bin/make -f
+
+DEB_HOST_ARCH_BITS ?= $(shell dpkg-architecture -qDEB_HOST_ARCH_BITS)
+
+ifeq ($(DEB_HOST_ARCH_BITS),64)
+ ARCH = lib64
+else
+ ARCH = lib
+endif
+
 %:
 	dh $@
 override_dh_install:
+	sed 's/@TARGET_LIB_ARCH@/$(ARCH)/g' hybris.c.in > hybris.c
 	dh_install audioflingerglue.h /usr/include/audioflingerglue
 	dh_install hybris.c /usr/share/audioflingerglue
